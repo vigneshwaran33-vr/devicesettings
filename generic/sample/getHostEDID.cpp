@@ -46,7 +46,7 @@
 int main(int argc, char *argv[]) 
 {
    
-	uint8_t physicalAddressA=1,physicalAddressB=0,physicalAddressC =0,physicalAddressD=0;
+	uint8_t physicalAddressA=1,physicalAddressB=0,physicalAddressC =0,physicalAddressD;
 
 	IARM_Bus_Init("SampleDSClient");
 	IARM_Bus_Connect();
