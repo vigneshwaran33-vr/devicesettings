@@ -203,7 +203,7 @@ IARM_Result_t _dsGetEDIDBytes(void *arg)
     dsDisplayGetEDIDBytesParam_t *param = (dsDisplayGetEDIDBytesParam_t *)arg;
 
     if (func != 0) {
-        unsigned char edid[512] = {0};
+        unsigned char edid[1024] = {0}; // Increased buffer size to 1024 to avoid out of bounds access
         int length = 0;
         dsError_t ret = func(param->handle, edid, &length);
         if (ret == dsERR_NONE && length <= 1024) {
